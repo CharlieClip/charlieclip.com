@@ -1,450 +1,169 @@
-body {
-    margin: 0;
+<!DOCTYPE html>
+<html lang="en">
 
-    background-color: black;
-    color: white;
+<head>
+    <meta charset="UTF-8">
 
-    font-family: Arial, sans-serif;
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    <title>CharlieClip</title>
 
-    height: 100vh;
-}
+    <!-- LOAD THE CSS FILE -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
 
-.box {
-    text-align: center;
-}
 
-h1 {
-    font-size: 48px;
-}
+<body>
 
-p {
-    font-size: 20px;
-}
+    <!-- =====================================
+         TOP BAR
+         ===================================== -->
 
-button {
-    background-color: white;
-    color: black;
+    <header class="topbar">
 
-    border: none;
+        <div class="nav-container">
 
-    padding: 12px 25px;
+            <a
+                class="site-name"
+                href="index.html"
+            >
+                CharlieClip
+            </a>
 
-    font-size: 18px;
 
-    cursor: pointer;
-}
+            <nav class="nav-links">
 
-button:hover {
-    background-color: lightgray;
-}
-/* =========================================
-   COLORS
-   CHANGE THESE!
-   ========================================= */
+                <a
+                    href="index.html"
+                    class="active"
+                >
+                    Home
+                </a>
 
-:root {
-    --background: #ffffff;
+                <a href="blog.html">
+                    Blog
+                </a>
 
-    --navbar-color: #ef3048;
-    --navbar-text: #ffffff;
+                <a href="games.html">
+                    Games
+                </a>
 
-    --title-color: #ef5a5a;
-    --normal-text: #181818;
+                <a href="about.html">
+                    About
+                </a>
 
-    --button-color: #ef3048;
-    --button-text: #ffffff;
+                <a
+                    href="https://charlieclip.itch.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    itch.io
+                </a>
 
-    --button-hover: #d9273e;
+            </nav>
 
-    --used-color: #777777;
+        </div>
 
-    --max-width: 1100px;
-}
+    </header>
 
 
-/* =========================================
-   EVERYTHING
-   ========================================= */
+    <!-- =====================================
+         HOME PAGE
+         ===================================== -->
 
-* {
-    box-sizing: border-box;
-}
+    <main class="home-main">
 
 
-html,
-body {
-    margin: 0;
-    padding: 0;
+        <!-- BIG IMAGE -->
 
-    min-height: 100%;
+        <div class="hero-image">
 
-    background-color: var(--background);
+            <img
+                src="images/home.png"
+                alt="CharlieClip"
+            >
 
-    color: var(--normal-text);
+        </div>
 
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-}
 
+        <!-- TEXT -->
 
-/* =========================================
-   TOP NAVIGATION BAR
-   ========================================= */
+        <div class="home-info">
 
-.topbar {
-    width: 100%;
+            <div class="home-text">
 
-    height: 72px;
+                <h1>
+                    Welcome!
+                </h1>
 
-    background-color: var(--navbar-color);
 
-    display: flex;
+                <p>
+                    Hey! This is my website.
+                    <br>
+                    I hate social media so I post here instead!
+                </p>
 
-    align-items: center;
 
-    position: relative;
+                <p>
+                    I make games, code things, mess with music,
+                    and have way too many ideas.
+                </p>
 
-    z-index: 100;
-}
 
+                <p>
+                    This is where I dump whatever I'm working on,
+                    thinking about, or think is cool enough to
+                    show people.
+                </p>
 
-.nav-container {
-    width: 92%;
 
-    max-width: var(--max-width);
+                <p>
+                    Check out my games, read some blog posts,
+                    or just poke around and see what you find.
+                </p>
 
-    margin: 0 auto;
 
-    display: flex;
+                <p>
+                    Enjoy your stay! :P
+                </p>
 
-    align-items: center;
+            </div>
 
-    justify-content: space-between;
-}
+        </div>
 
 
-/* =========================================
-   WEBSITE NAME
-   ========================================= */
+        <!-- =================================
+             LATEST STUFF
+             ================================= -->
 
-.site-name {
-    color: var(--navbar-text);
+        <section class="extra-section">
 
-    text-decoration: none;
+            <h2>
+                Latest stuff
+            </h2>
 
-    font-size: 23px;
+            <p>
+                Check out development updates
+                and other posts on my blog.
+            </p>
 
-    font-weight: bold;
-}
+            <a
+                class="blog-button"
+                href="blog.html"
+            >
+                GO TO BLOG
+            </a>
 
+        </section>
 
-/* =========================================
-   NAVIGATION LINKS
-   ========================================= */
+    </main>
 
-.nav-links {
-    display: flex;
+</body>
 
-    align-items: center;
-
-    gap: 34px;
-}
-
-
-.nav-links a {
-    color: var(--navbar-text);
-
-    text-decoration: none;
-
-    font-size: 15px;
-
-    padding: 8px 0;
-
-    border-bottom: 2px solid transparent;
-
-    transition: 0.15s;
-}
-
-
-.nav-links a:hover {
-    opacity: 0.75;
-}
-
-
-.nav-links a.active {
-    border-bottom-color: var(--navbar-text);
-}
-
-
-/* =========================================
-   HOME PAGE
-   ========================================= */
-
-.home-main {
-    min-height: calc(100vh - 72px);
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    padding: 60px 20px;
-}
-
-
-.home-box {
-    text-align: center;
-
-    max-width: 700px;
-}
-
-
-.home-box h1 {
-    margin: 0 0 20px;
-
-    font-size: 52px;
-}
-
-
-.home-box p {
-    font-size: 20px;
-
-    line-height: 1.6;
-}
-
-
-/* =========================================
-   HOME BUTTONS
-   ========================================= */
-
-.home-buttons {
-    margin-top: 35px;
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 15px;
-
-    flex-wrap: wrap;
-}
-
-
-.main-button {
-    display: inline-block;
-
-    padding: 14px 28px;
-
-    background-color: var(--button-color);
-
-    color: var(--button-text);
-
-    text-decoration: none;
-
-    font-size: 17px;
-
-    border-radius: 4px;
-
-    transition: 0.15s;
-}
-
-
-.main-button:hover {
-    background-color: var(--button-hover);
-
-    transform: translateY(-2px);
-}
-
-
-/* =========================================
-   BLOG PAGE
-   ========================================= */
-
-.blog-main {
-    width: 92%;
-
-    max-width: var(--max-width);
-
-    margin: 0 auto;
-
-    padding: 75px 0 120px;
-}
-
-
-/* =========================================
-   BLOG POSTS
-   ========================================= */
-
-.blog-post {
-    width: 100%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 60px;
-
-    margin-bottom: 110px;
-}
-
-
-/* Alternate posts */
-
-.blog-post.reverse {
-    flex-direction: row-reverse;
-}
-
-
-/* =========================================
-   BLOG IMAGE
-   ========================================= */
-
-.blog-image {
-    flex: 0 0 48%;
-}
-
-
-.blog-image img {
-    display: block;
-
-    width: 100%;
-
-    height: 350px;
-
-    object-fit: cover;
-
-    background-color: #eeeeee;
-}
-
-
-/* =========================================
-   BLOG TEXT
-   ========================================= */
-
-.blog-text {
-    flex: 1;
-
-    max-width: 480px;
-}
-
-
-.blog-text h2 {
-    margin: 0 0 20px;
-
-    color: var(--title-color);
-
-    font-size: 28px;
-
-    line-height: 1.25;
-}
-
-
-.blog-text p {
-    margin: 0 0 18px;
-
-    line-height: 1.65;
-
-    font-size: 15px;
-}
-
-
-.blog-date {
-    font-weight: bold;
-}
-
-
-/* =========================================
-   READ MORE
-   ========================================= */
-
-.read-more {
-    color: var(--title-color);
-
-    text-decoration: underline;
-
-    font-size: 14px;
-}
-
-
-.read-more:hover {
-    opacity: 0.7;
-}
-
-
-/* =========================================
-   SMALL SCREENS
-   ========================================= */
-
-@media (max-width: 800px) {
-
-    .topbar {
-        height: auto;
-
-        padding: 18px 0;
-    }
-
-
-    .nav-container {
-        flex-direction: column;
-
-        gap: 15px;
-    }
-
-
-    .nav-links {
-        gap: 22px;
-    }
-
-
-    .home-main {
-        min-height: calc(100vh - 110px);
-    }
-
-
-    .home-box h1 {
-        font-size: 38px;
-    }
-
-
-    .blog-main {
-        padding-top: 50px;
-    }
-
-
-    .blog-post,
-    .blog-post.reverse {
-        flex-direction: column;
-
-        gap: 30px;
-
-        margin-bottom: 80px;
-    }
-
-
-    .blog-image {
-        width: 100%;
-
-        flex: none;
-    }
-
-
-    .blog-image img {
-        height: auto;
-    }
-
-
-    .blog-text {
-        max-width: none;
-
-        width: 100%;
-    }
-}
+</html>
