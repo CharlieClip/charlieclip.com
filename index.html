@@ -1,512 +1,450 @@
-<!DOCTYPE html>
-<html lang="en">
+body {
+    margin: 0;
 
-<head>
+    background-color: black;
+    color: white;
 
-    <meta charset="UTF-8">
+    font-family: Arial, sans-serif;
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    <title>CharlieClip</title>
+    height: 100vh;
+}
 
+.box {
+    text-align: center;
+}
 
-    <style>
+h1 {
+    font-size: 48px;
+}
 
-        /* =========================================
-           EDIT COLORS / SIZES HERE
-           ========================================= */
+p {
+    font-size: 20px;
+}
 
-        :root {
+button {
+    background-color: white;
+    color: black;
 
-            /* PAGE */
-            --background-color: #ffffff;
-            --text-color: #111111;
+    border: none;
 
+    padding: 12px 25px;
 
-            /* TOP BAR */
-            --bar-color: #a545a5;
-            --bar-text-color: #ffffff;
+    font-size: 18px;
 
-            --bar-height: 72px;
+    cursor: pointer;
+}
 
+button:hover {
+    background-color: lightgray;
+}
+/* =========================================
+   COLORS
+   CHANGE THESE!
+   ========================================= */
 
-            /* MAIN CONTENT */
-            --content-width: 800px;
+:root {
+    --background: #ffffff;
 
-            --image-height: 300px;
-        }
+    --navbar-color: #ef3048;
+    --navbar-text: #ffffff;
 
+    --title-color: #ef5a5a;
+    --normal-text: #181818;
 
-        /* =========================================
-           RESET
-           ========================================= */
+    --button-color: #ef3048;
+    --button-text: #ffffff;
 
-        * {
-            box-sizing: border-box;
-        }
+    --button-hover: #d9273e;
 
+    --used-color: #777777;
 
-        html,
-        body {
-            margin: 0;
-            padding: 0;
+    --max-width: 1100px;
+}
 
-            width: 100%;
-            min-height: 100%;
 
-            background-color:
-                var(--background-color);
+/* =========================================
+   EVERYTHING
+   ========================================= */
 
-            color:
-                var(--text-color);
+* {
+    box-sizing: border-box;
+}
 
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-        }
 
+html,
+body {
+    margin: 0;
+    padding: 0;
 
-        /* =========================================
-           TOP BAR
-           ========================================= */
+    min-height: 100%;
 
-        .topbar {
+    background-color: var(--background);
 
-            width: 100%;
+    color: var(--normal-text);
 
-            height:
-                var(--bar-height);
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
 
-            background-color:
-                var(--bar-color);
 
-            display: flex;
+/* =========================================
+   TOP NAVIGATION BAR
+   ========================================= */
 
-            align-items: center;
+.topbar {
+    width: 100%;
 
-            position: relative;
+    height: 72px;
 
-            z-index: 100;
-        }
+    background-color: var(--navbar-color);
 
+    display: flex;
 
-        /* =========================================
-           NAVIGATION CONTENT
-           ========================================= */
+    align-items: center;
 
-        .nav-container {
+    position: relative;
 
-            width: 92%;
+    z-index: 100;
+}
 
-            max-width: 1050px;
 
-            margin: 0 auto;
+.nav-container {
+    width: 92%;
 
-            display: flex;
+    max-width: var(--max-width);
 
-            justify-content: space-between;
+    margin: 0 auto;
 
-            align-items: center;
-        }
+    display: flex;
 
+    align-items: center;
 
-        /* =========================================
-           WEBSITE NAME
-           ========================================= */
+    justify-content: space-between;
+}
 
-        .site-name {
 
-            color:
-                var(--bar-text-color);
+/* =========================================
+   WEBSITE NAME
+   ========================================= */
 
-            text-decoration: none;
+.site-name {
+    color: var(--navbar-text);
 
-            font-size: 20px;
+    text-decoration: none;
 
-            font-weight: bold;
-        }
+    font-size: 23px;
 
+    font-weight: bold;
+}
 
-        /* =========================================
-           NAV LINKS
-           ========================================= */
 
-        .nav-links {
+/* =========================================
+   NAVIGATION LINKS
+   ========================================= */
 
-            display: flex;
+.nav-links {
+    display: flex;
 
-            align-items: center;
+    align-items: center;
 
-            gap: 34px;
-        }
+    gap: 34px;
+}
 
 
-        .nav-links a {
+.nav-links a {
+    color: var(--navbar-text);
 
-            color:
-                var(--bar-text-color);
+    text-decoration: none;
 
-            text-decoration: none;
+    font-size: 15px;
 
-            font-size: 14px;
+    padding: 8px 0;
 
-            padding: 8px 0;
+    border-bottom: 2px solid transparent;
 
-            border-bottom:
-                2px solid transparent;
-        }
+    transition: 0.15s;
+}
 
 
-        .nav-links a:hover {
+.nav-links a:hover {
+    opacity: 0.75;
+}
 
-            border-bottom-color:
-                var(--bar-text-color);
-        }
 
+.nav-links a.active {
+    border-bottom-color: var(--navbar-text);
+}
 
-        /* =========================================
-           MAIN PAGE
-           ========================================= */
 
-        .home-main {
+/* =========================================
+   HOME PAGE
+   ========================================= */
 
-            width: 92%;
+.home-main {
+    min-height: calc(100vh - 72px);
 
-            max-width:
-                var(--content-width);
+    display: flex;
 
-            margin:
-                0 auto;
+    justify-content: center;
 
-            padding:
-                45px 0 100px;
-        }
+    align-items: center;
 
+    padding: 60px 20px;
+}
 
-        /* =========================================
-           BIG IMAGE
-           ========================================= */
 
-        .hero-image {
+.home-box {
+    text-align: center;
 
-            width: 100%;
+    max-width: 700px;
+}
 
-            height:
-                var(--image-height);
 
-            border:
-                3px solid black;
+.home-box h1 {
+    margin: 0 0 20px;
 
-            overflow: hidden;
+    font-size: 52px;
+}
 
-            background-color: #eeeeee;
-        }
 
+.home-box p {
+    font-size: 20px;
 
-        .hero-image img {
+    line-height: 1.6;
+}
 
-            display: block;
 
-            width: 100%;
+/* =========================================
+   HOME BUTTONS
+   ========================================= */
 
-            height: 100%;
+.home-buttons {
+    margin-top: 35px;
 
-            object-fit: cover;
-        }
+    display: flex;
 
+    justify-content: center;
 
-        /* =========================================
-           TEXT
-           ========================================= */
+    gap: 15px;
 
-        .home-info {
+    flex-wrap: wrap;
+}
 
-            margin-top: 25px;
-        }
 
+.main-button {
+    display: inline-block;
 
-        .home-text {
+    padding: 14px 28px;
 
-            font-size: 16px;
+    background-color: var(--button-color);
 
-            line-height: 1.55;
-        }
+    color: var(--button-text);
 
+    text-decoration: none;
 
-        .home-text h1 {
+    font-size: 17px;
 
-            margin:
-                0 0 12px;
+    border-radius: 4px;
 
-            font-size: 30px;
-        }
+    transition: 0.15s;
+}
 
 
-        .home-text p {
+.main-button:hover {
+    background-color: var(--button-hover);
 
-            margin:
-                0 0 16px;
-        }
+    transform: translateY(-2px);
+}
 
 
-        /* =========================================
-           EXTRA SECTION
-           ========================================= */
+/* =========================================
+   BLOG PAGE
+   ========================================= */
 
-        .extra-section {
+.blog-main {
+    width: 92%;
 
-            margin-top: 90px;
+    max-width: var(--max-width);
 
-            text-align: center;
-        }
+    margin: 0 auto;
 
+    padding: 75px 0 120px;
+}
 
-        .extra-section h2 {
 
-            font-size: 26px;
-        }
+/* =========================================
+   BLOG POSTS
+   ========================================= */
 
+.blog-post {
+    width: 100%;
 
-        .blog-button {
+    display: flex;
 
-            display: inline-block;
+    align-items: center;
 
-            margin-top: 15px;
+    justify-content: center;
 
-            padding:
-                13px 28px;
+    gap: 60px;
 
-            background-color:
-                var(--bar-color);
+    margin-bottom: 110px;
+}
 
-            color:
-                var(--bar-text-color);
 
-            text-decoration: none;
+/* Alternate posts */
 
-            font-weight: bold;
-        }
+.blog-post.reverse {
+    flex-direction: row-reverse;
+}
 
 
-        .blog-button:hover {
+/* =========================================
+   BLOG IMAGE
+   ========================================= */
 
-            opacity: 0.8;
-        }
+.blog-image {
+    flex: 0 0 48%;
+}
 
 
-        /* =========================================
-           MOBILE
-           ========================================= */
+.blog-image img {
+    display: block;
 
-        @media (max-width: 750px) {
+    width: 100%;
 
-            .topbar {
+    height: 350px;
 
-                height: auto;
+    object-fit: cover;
 
-                padding:
-                    18px 0;
-            }
+    background-color: #eeeeee;
+}
 
 
-            .nav-container {
+/* =========================================
+   BLOG TEXT
+   ========================================= */
 
-                flex-direction: column;
+.blog-text {
+    flex: 1;
 
-                gap: 15px;
-            }
+    max-width: 480px;
+}
 
 
-            .nav-links {
+.blog-text h2 {
+    margin: 0 0 20px;
 
-                gap: 20px;
+    color: var(--title-color);
 
-                flex-wrap: wrap;
+    font-size: 28px;
 
-                justify-content: center;
-            }
+    line-height: 1.25;
+}
 
 
-            .home-main {
+.blog-text p {
+    margin: 0 0 18px;
 
-                padding-top: 30px;
-            }
+    line-height: 1.65;
 
+    font-size: 15px;
+}
 
-            .hero-image {
 
-                height: 230px;
-            }
-        }
+.blog-date {
+    font-weight: bold;
+}
 
-    </style>
 
-</head>
+/* =========================================
+   READ MORE
+   ========================================= */
 
+.read-more {
+    color: var(--title-color);
 
-<body>
+    text-decoration: underline;
 
+    font-size: 14px;
+}
 
-    <!-- =====================================
-         TOP BAR
-         ===================================== -->
 
-    <header class="topbar">
+.read-more:hover {
+    opacity: 0.7;
+}
 
-        <div class="nav-container">
 
+/* =========================================
+   SMALL SCREENS
+   ========================================= */
 
-            <a
-                class="site-name"
-                href="index.html"
-            >
-                CharlieClip
-            </a>
+@media (max-width: 800px) {
 
+    .topbar {
+        height: auto;
 
-            <nav class="nav-links">
+        padding: 18px 0;
+    }
 
-                <a href="index.html">
-                    Home
-                </a>
 
+    .nav-container {
+        flex-direction: column;
 
-                <a href="blog.html">
-                    Blog
-                </a>
+        gap: 15px;
+    }
 
 
-                <a href="games.html">
-                    Games
-                </a>
+    .nav-links {
+        gap: 22px;
+    }
 
 
-                <a href="about.html">
-                    About
-                </a>
+    .home-main {
+        min-height: calc(100vh - 110px);
+    }
 
 
-                <a
-                    href="https://charlieclip.itch.io/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    itch.io
-                </a>
+    .home-box h1 {
+        font-size: 38px;
+    }
 
-            </nav>
 
-        </div>
+    .blog-main {
+        padding-top: 50px;
+    }
 
-    </header>
 
+    .blog-post,
+    .blog-post.reverse {
+        flex-direction: column;
 
+        gap: 30px;
 
-    <!-- =====================================
-         MAIN CONTENT
-         ===================================== -->
+        margin-bottom: 80px;
+    }
 
-    <main class="home-main">
 
+    .blog-image {
+        width: 100%;
 
-        <!-- =================================
-             BIG IMAGE
-             ================================= -->
+        flex: none;
+    }
 
-        <div class="hero-image">
 
-            <img
-                src="home.png"
-                alt="Main website image"
-            >
+    .blog-image img {
+        height: auto;
+    }
 
-        </div>
 
+    .blog-text {
+        max-width: none;
 
-
-        <!-- =================================
-             TEXT UNDER IMAGE
-             ================================= -->
-
-        <div class="home-info">
-
-            <div class="home-text">
-
-                <h1>
-                    Welcome!
-                </h1>
-
-
-                <p>
-                    Hey! This is my website.
-                    <br>
-                    I hate social media so I post here instead!
-                </p>
-
-
-                <p>
-                    I make games, code things, mess with music,
-                    and have way too many ideas.
-                </p>
-
-
-                <p>
-                    This is where I dump whatever I'm working on,
-                    thinking about, or think is cool enough to
-                    show people.
-                </p>
-
-
-                <p>
-                    Check out my games, read some blog posts,
-                    or just poke around and see what you find.
-                </p>
-
-
-                <p>
-                    Enjoy your stay! :P
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =================================
-             BLOG SECTION
-             ================================= -->
-
-        <section class="extra-section">
-
-            <h2>
-                Latest stuff
-            </h2>
-
-
-            <p>
-                Check out development updates
-                and other posts on my blog.
-            </p>
-
-
-            <a
-                class="blog-button"
-                href="blog.html"
-            >
-                GO TO BLOG
-            </a>
-
-        </section>
-
-
-    </main>
-
-
-</body>
-
-</html>
+        width: 100%;
+    }
+}
