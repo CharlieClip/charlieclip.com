@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Why i made this website - CharlieClip</title>
+
+
+    <style>
+
+        :root {
+            --background: #ffffff;
+            --text-color: #111111;
+
+            --bar-color: #a545a5;
+            --bar-text: #ffffff;
+
+            --title-color: #ef5a5a;
+
+            --max-width: 900px;
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+
+            background:
+                var(--background);
+
+            color:
+                var(--text-color);
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+        }
+
+
+        /* =====================================
+           TOP BAR
+           ===================================== */
+
+        .topbar {
+            width: 100%;
+            height: 75px;
+
+            background:
+                var(--bar-color);
+
+            display: flex;
+            align-items: center;
+        }
+
+
+        .nav {
+            width: 92%;
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo {
+            color:
+                var(--bar-text);
+
+            text-decoration: none;
+
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+
+        .links {
+            display: flex;
+
+            gap: 35px;
+
+            align-items: center;
+        }
+
+
+        .links a {
+            color:
+                var(--bar-text);
+
+            text-decoration: none;
+
+            font-size: 15px;
+        }
+
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =====================================
+           ARTICLE
+           ===================================== */
+
+        .article {
+            width: 92%;
+            max-width:
+                var(--max-width);
+
+            margin:
+                60px auto 120px;
+        }
+
+
+        /* =====================================
+           IMAGE
+           ===================================== */
+
+        .article-image {
+            width: 100%;
+
+            margin-bottom: 35px;
+        }
+
+
+        .article-image img {
+            display: block;
+
+            width: 100%;
+
+            max-height: 500px;
+
+            object-fit: cover;
+        }
+
+
+        /* =====================================
+           TITLE
+           ===================================== */
+
+        .article h1 {
+            margin:
+                0 0 10px;
+
+            color:
+                var(--title-color);
+
+            font-size: 42px;
+
+            line-height: 1.2;
+        }
+
+
+        .date {
+            margin-bottom: 35px;
+
+            font-weight: bold;
+        }
+
+
+        /* =====================================
+           TEXT
+           ===================================== */
+
+        .article-text {
+            font-size: 17px;
+
+            line-height: 1.8;
+        }
+
+
+        .article-text p {
+            margin-bottom: 24px;
+        }
+
+
+        .article-text h2 {
+            margin-top: 45px;
+
+            font-size: 28px;
+        }
+
+
+        /* =====================================
+           BACK BUTTON
+           ===================================== */
+
+        .back-button {
+            display: inline-block;
+
+            margin-top: 40px;
+
+            padding:
+                13px 25px;
+
+            background:
+                var(--bar-color);
+
+            color:
+                var(--bar-text);
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+
+        .back-button:hover {
+            opacity: 0.8;
+        }
+
+
+        /* =====================================
+           MOBILE
+           ===================================== */
+
+        @media (max-width: 750px) {
+
+            .topbar {
+                height: auto;
+
+                padding:
+                    20px 0;
+            }
+
+
+            .nav {
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+
+            .links {
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 20px;
+            }
+
+
+            .article {
+                margin-top: 35px;
+            }
+
+
+            .article h1 {
+                font-size: 32px;
+            }
+
+
+            .article-text {
+                font-size: 16px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         TOP BAR
+         ===================================== -->
+
+    <header class="topbar">
+
+        <div class="nav">
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                CharlieClip
+            </a>
+
+
+            <div class="links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="blog.html">
+                    Blog
+                </a>
+
+<a href="games.html">Games</a>
+<a href="about.html">About</a>
+
+                <a
+                    href="https://charlieclip.itch.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    itch.io
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         FULL BLOG POST
+         ===================================== -->
+
+    <main class="article">
+
+
+        <!-- BIG IMAGE -->
+
+        <div class="article-image">
+
+            <img
+                src="images/post2.png"
+                alt="Blog post image"
+            >
+
+        </div>
+
+
+        <!-- TITLE -->
+
+        <h1>
+            Why I Made This Website
+        </h1>
+
+
+        <!-- DATE -->
+
+        <p class="date">
+            8/18/26
+        </p>
+
+
+        <!-- =================================
+             ALL YOUR TEXT GOES HERE
+             ================================= -->
+
+        <div class="article-text">
+
+            <p>
+Hey!
+            <p>
+Welcome to my website.
+            <p>
+If you're wondering why I have an entire website instead of just posting everything I make on social media, the short answer is:
+            <p>
+I hate social media.
+            <p>
+That's basically it.
+            <p>
+But since this is a blog and I can make these posts as unnecessarily long as I want, here's the longer answer.
+            <h2>
+I Don't Really Like Social Media
+            </h2>
+            </p>
+I've tried using social media.
+            </p>
+I don't particularly enjoy it.
+            </p>
+There's something weird about making something you're proud of, posting it, and immediately having it thrown into an endless feed with a million other things fighting for someone's attention.
+            </p>
+Everything feels temporary.
+            </p>
+You post something.
+            </p>
+People might see it.
+            </p>
+Maybe they don't.
+            </p>
+A day later, it's buried underneath everything else.
+            </p>
+Then you're supposed to post again.
+            </p>
+And again.
+            </p>
+And again.
+            </p>
+I don't really want that to be the main way I share things I make.
+            </p>
+I still upload games on Itch.io, though i dont think that counts at social media
+            </p>
+But I'd rather those places point people here.
+            </p>
+Because this place is mine.
+            </p>
+
+
+            <p>
+
+            <h2>
+                So I Made My Own Place
+            </h2>
+I liked the idea of someone finding something I made, clicking on my profile, and seeing:
+            <p>
+My Website!
+            <p>
+Then they click it and suddenly they're here.
+            <p>
+No algorithm deciding which one of my posts you're allowed to see.
+            <p>
+No trying to squeeze everything into whatever format a platform wants.
+            <p>
+No worrying that something I spent hours making is going to disappear into a feed five minutes after I post it.
+            <p>
+Just my stuff.
+            <p>
+If I want to write three paragraphs, I can.
+            <p>
+If I want to write thirty paragraphs, apparently I can do that too.
+            <p>
+If I want to post five screenshots of something I'm making, I can.
+            <p>
+If I want to post a tiny story I wrote because it meant something to me, I can do that.
+            <p>
+If I make a song and want to put it somewhere, I can.
+            <p>
+If I want to hide something incredibly stupid on a page where almost nobody will ever find it...
+            <p>
+I can absolutely do that.
+            <p>
+What Am I Going to Put Here?
+            <p>
+Probably a little bit of everything.
+            <p>
+The biggest thing right now is obviously game development.
+            <p>
+I'm currently making Floodgate, a fan-made remake/reimagining of PRESSURE, and that's probably going to appear here a lot.
+            <p>
+I'll post development updates, screenshots, mechanics I'm working on, things I've finished, things that broke horribly, things I scrapped, ideas I'm planning, and whatever else seems interesting enough to write about.
+            <p>
+But I don't want this website to exclusively be a Floodgate devlog.
+            <p>
+I also like coding in general.
+            <p>
+I'm getting into music and remixing songs.
+            <p>
+Sometimes I write things.
+            <p>
+Sometimes I have an idea that doesn't really belong anywhere else.
+            <p>
+Sometimes I just want to talk about something.
+            <p>
+So that's what the Blog page is for.
+            <p>
+It's basically where I can dump whatever I'm making, thinking about, or think is cool enough to show someone.
+
+
+            <h2>
+                My Games
+            </h2>
+
+There's also a Games page.
+            <p>
+That's where I'll keep the games I've made and the games I'm currently working on.
+            <p>
+Right now, Floodgate is obviously going to be the main thing there.
+            <p>
+But I really like the idea of keeping this website around for a long time.
+            <p>
+Eventually Floodgate won't be the only thing on that page.
+            <p>
+There'll be other projects.
+            <p>
+Finished games.
+            <p>
+Old games.
+            <p>
+Experiments.
+            <p>
+Maybe things I'm extremely proud of.
+            <p>
+Maybe things I'll look back at five years later and wonder what the fuck I was doing.
+            <p>
+But they'll still be there.
+            <p>
+I think that's cool.
+            <p>
+Instead of everything I've made being scattered across random websites and accounts, I can have one place that basically becomes an archive of stuff I've created over time.
+            <p>
+
+            <h2>
+                About Me!
+            </h2>
+Then there's the About page.
+            <p>
+That's pretty self-explanatory.
+            <p>
+It's me.
+            <p>
+Hello.
+            <p>
+I make games.
+            <p>
+I code things.
+            <p>
+I mess around with music.
+            <p>
+I have too many ideas.
+            <p>
+That's about the situation.
+            <p>
+I'm not trying to make this some super-professional portfolio where I describe myself as an "innovative interactive media developer specializing in immersive digital experiences."
+
+I make games because making games is fun.
+            <p>
+I code because I genuinely like coding.
+            <p>
+Sometimes I spend four hours making one room.
+            <p>
+Sometimes I accidentally create 689 Unity errors.
+            <p>
+Sometimes I make something really cool.
+            <p>
+That's what I want this site to feel like.
+            <p>
+Not a company.
+            <p>
+Not a brand.
+            <p>
+Just a person who makes stuff.
+            <p>
+I Want This Website to Feel Like Mine
+            <p>
+That's probably the most important part.
+            <p>
+I don't want this website to look like every other modern website.
+            <p>
+I don't need fifteen pop-ups.
+            <p>
+I don't need an account system.
+            <p>
+I don't need an algorithm.
+            <p>
+I don't need notifications begging you to come back.
+            <p>
+I don't need a button asking you to subscribe to the CharlieClip Premium Newsletter™.
+            <p>
+I just want a website.
+            <p>
+You show up.
+            <p>
+You look around.
+            <p>
+Maybe you read something.
+            <p>
+Maybe you find one of my games.
+            <p>
+Maybe you discover something hidden that you weren't supposed to find.
+            <p>
+Then you leave.
+            <p>
+And maybe sometime later you come back and there's something new.
+            <p>
+That's enough.
+            <p>
+So... Yeah.
+            <p>
+That's why this exists.
+            <p>
+I hate social media.
+            <p>
+I like making things.
+            <p>
+So instead of relying entirely on somebody else's website to show people what I'm making...
+            <p>
+I made my own.
+            <p>
+I'll still post elsewhere occasionally, especially when I have something big to show or when I eventually release a game.
+            <p>
+But this is where I want all of it to actually live.
+            <p>
+My games.
+            <p>
+My blog.
+            <p>
+My music.
+            <p>
+My random projects.
+            <p>
+My terrible ideas.
+            <p>
+My good ideas.
+            <p>
+Whatever comes next.
+            <p>
+If you're actually reading this, somehow you've ended up in my little part of the internet.
+            <p>
+So...
+            <p>
+Hi!
+            <p>
+Have a look around.
+            <p>
+Enjoy your stay! :P
+            </p>
+
+
+
+            <a
+                class="back-button"
+                href="blog.html"
+            >
+                BACK TO BLOG
+            </a>
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>
