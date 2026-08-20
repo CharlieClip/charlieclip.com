@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -11,15 +12,344 @@
 
     <title>CharlieClip</title>
 
-    <!-- LOAD THE CSS FILE -->
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+
+    <style>
+
+        /* =========================================
+           EDIT COLORS / SIZES HERE
+           ========================================= */
+
+        :root {
+
+            /* PAGE */
+            --background-color: #ffffff;
+            --text-color: #111111;
+
+
+            /* TOP BAR */
+            --bar-color: #a545a5;
+            --bar-text-color: #ffffff;
+
+            --bar-height: 72px;
+
+
+            /* MAIN CONTENT */
+            --content-width: 800px;
+
+            --image-height: 300px;
+        }
+
+
+        /* =========================================
+           RESET
+           ========================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+
+            width: 100%;
+            min-height: 100%;
+
+            background-color:
+                var(--background-color);
+
+            color:
+                var(--text-color);
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+        }
+
+
+        /* =========================================
+           TOP BAR
+           ========================================= */
+
+        .topbar {
+
+            width: 100%;
+
+            height:
+                var(--bar-height);
+
+            background-color:
+                var(--bar-color);
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            z-index: 100;
+        }
+
+
+        /* =========================================
+           NAVIGATION CONTENT
+           ========================================= */
+
+        .nav-container {
+
+            width: 92%;
+
+            max-width: 1050px;
+
+            margin: 0 auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+
+        /* =========================================
+           WEBSITE NAME
+           ========================================= */
+
+        .site-name {
+
+            color:
+                var(--bar-text-color);
+
+            text-decoration: none;
+
+            font-size: 20px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================================
+           NAV LINKS
+           ========================================= */
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 34px;
+        }
+
+
+        .nav-links a {
+
+            color:
+                var(--bar-text-color);
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            padding: 8px 0;
+
+            border-bottom:
+                2px solid transparent;
+        }
+
+
+        .nav-links a:hover {
+
+            border-bottom-color:
+                var(--bar-text-color);
+        }
+
+
+        /* =========================================
+           MAIN PAGE
+           ========================================= */
+
+        .home-main {
+
+            width: 92%;
+
+            max-width:
+                var(--content-width);
+
+            margin:
+                0 auto;
+
+            padding:
+                45px 0 100px;
+        }
+
+
+        /* =========================================
+           BIG IMAGE
+           ========================================= */
+
+        .hero-image {
+
+            width: 100%;
+
+            height:
+                var(--image-height);
+
+            border:
+                3px solid black;
+
+            overflow: hidden;
+
+            background-color: #eeeeee;
+        }
+
+
+        .hero-image img {
+
+            display: block;
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        /* =========================================
+           TEXT
+           ========================================= */
+
+        .home-info {
+
+            margin-top: 25px;
+        }
+
+
+        .home-text {
+
+            font-size: 16px;
+
+            line-height: 1.55;
+        }
+
+
+        .home-text h1 {
+
+            margin:
+                0 0 12px;
+
+            font-size: 30px;
+        }
+
+
+        .home-text p {
+
+            margin:
+                0 0 16px;
+        }
+
+
+        /* =========================================
+           EXTRA SECTION
+           ========================================= */
+
+        .extra-section {
+
+            margin-top: 90px;
+
+            text-align: center;
+        }
+
+
+        .extra-section h2 {
+
+            font-size: 26px;
+        }
+
+
+        .blog-button {
+
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding:
+                13px 28px;
+
+            background-color:
+                var(--bar-color);
+
+            color:
+                var(--bar-text-color);
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+
+        .blog-button:hover {
+
+            opacity: 0.8;
+        }
+
+
+        /* =========================================
+           MOBILE
+           ========================================= */
+
+        @media (max-width: 750px) {
+
+            .topbar {
+
+                height: auto;
+
+                padding:
+                    18px 0;
+            }
+
+
+            .nav-container {
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+
+            .nav-links {
+
+                gap: 20px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            .home-main {
+
+                padding-top: 30px;
+            }
+
+
+            .hero-image {
+
+                height: 230px;
+            }
+        }
+
+    </style>
+
 </head>
 
 
 <body>
+
 
     <!-- =====================================
          TOP BAR
@@ -29,6 +359,9 @@
 
         <div class="nav-container">
 
+
+            <!-- WEBSITE NAME -->
+
             <a
                 class="site-name"
                 href="index.html"
@@ -37,26 +370,24 @@
             </a>
 
 
+            <!-- LINKS -->
+
             <nav class="nav-links">
 
-                <a
-                    href="index.html"
-                    class="active"
-                >
+                <a href="index.html">
                     Home
                 </a>
+
 
                 <a href="blog.html">
                     Blog
                 </a>
 
-                <a href="games.html">
-                    Games
-                </a>
+<a href="games.html">Games</a>
+<a href="about.html">About</a>
 
-                <a href="about.html">
-                    About
-                </a>
+
+                <!-- ITCH.IO -->
 
                 <a
                     href="https://charlieclip.itch.io/"
@@ -73,26 +404,32 @@
     </header>
 
 
+
     <!-- =====================================
-         HOME PAGE
+         MAIN CONTENT
          ===================================== -->
 
     <main class="home-main">
 
 
-        <!-- BIG IMAGE -->
+        <!-- =================================
+             BIG IMAGE
+             ================================= -->
 
         <div class="hero-image">
 
             <img
                 src="images/home.png"
-                alt="CharlieClip"
+                alt="Main website image"
             >
 
         </div>
 
 
-        <!-- TEXT -->
+
+        <!-- =================================
+             TEXT UNDER IMAGE
+             ================================= -->
 
         <div class="home-info">
 
@@ -138,8 +475,9 @@
         </div>
 
 
+
         <!-- =================================
-             LATEST STUFF
+             BLOG SECTION
              ================================= -->
 
         <section class="extra-section">
@@ -148,10 +486,12 @@
                 Latest stuff
             </h2>
 
+
             <p>
                 Check out development updates
                 and other posts on my blog.
             </p>
+
 
             <a
                 class="blog-button"
@@ -162,7 +502,9 @@
 
         </section>
 
+
     </main>
+
 
 </body>
 
