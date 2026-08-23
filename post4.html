@@ -12,20 +12,29 @@
 
     <title>New Blog Post - CharlieClip</title>
 
+
     <style>
+
+        /* =========================================
+           COLORS - CHANGE THESE IF YOU WANT
+           ========================================= */
 
         :root {
             --background: #ffffff;
-            --text: #111111;
+            --text-color: #111111;
 
-            --purple: #a545a5;
-            --white: #ffffff;
+            --bar-color: #a545a5;
+            --bar-text: #ffffff;
 
             --title-color: #ef5a5a;
 
             --max-width: 900px;
         }
 
+
+        /* =========================================
+           RESET
+           ========================================= */
 
         * {
             box-sizing: border-box;
@@ -40,8 +49,8 @@
             width: 100%;
             min-height: 100%;
 
-            background: var(--background);
-            color: var(--text);
+            background-color: var(--background);
+            color: var(--text-color);
 
             font-family:
                 Arial,
@@ -53,16 +62,15 @@
         }
 
 
-        /* =====================================
+        /* =========================================
            TOP BAR
-           ===================================== */
+           ========================================= */
 
         .topbar {
             width: 100%;
-
             min-height: 75px;
 
-            background: var(--purple);
+            background-color: var(--bar-color);
 
             display: flex;
             align-items: center;
@@ -81,8 +89,12 @@
         }
 
 
+        /* =========================================
+           CHARLIECLIP LOGO
+           ========================================= */
+
         .logo {
-            color: var(--white);
+            color: var(--bar-text);
 
             text-decoration: none;
 
@@ -91,9 +103,12 @@
         }
 
 
+        /* =========================================
+           NAVIGATION
+           ========================================= */
+
         .links {
             display: flex;
-
             align-items: center;
 
             gap: 35px;
@@ -101,37 +116,38 @@
 
 
         .links a {
-            color: var(--white);
+            color: var(--bar-text);
 
             text-decoration: none;
 
             font-size: 15px;
+
+            padding: 8px 0;
+
+            border-bottom: 2px solid transparent;
         }
 
 
         .links a:hover {
-            text-decoration: underline;
+            border-bottom-color: var(--bar-text);
         }
 
 
-        /* =====================================
+        /* =========================================
            ARTICLE
-           ===================================== */
+           ========================================= */
 
         .article {
             width: 92%;
+            max-width: var(--max-width);
 
-            max-width:
-                var(--max-width);
-
-            margin:
-                60px auto 120px;
+            margin: 60px auto 120px;
         }
 
 
-        /* =====================================
-           IMAGE
-           ===================================== */
+        /* =========================================
+           TOP IMAGE
+           ========================================= */
 
         .article-image {
             width: 100%;
@@ -144,29 +160,32 @@
             display: block;
 
             width: 100%;
-
             max-height: 500px;
 
             object-fit: cover;
+
+            background-color: #eeeeee;
         }
 
 
-        /* =====================================
+        /* =========================================
            TITLE
-           ===================================== */
+           ========================================= */
 
         .article h1 {
-            margin:
-                0 0 10px;
+            margin: 0 0 10px;
 
-            color:
-                var(--title-color);
+            color: var(--title-color);
 
             font-size: 42px;
 
             line-height: 1.2;
         }
 
+
+        /* =========================================
+           DATE
+           ========================================= */
 
         .date {
             margin-bottom: 35px;
@@ -175,9 +194,9 @@
         }
 
 
-        /* =====================================
-           TEXT
-           ===================================== */
+        /* =========================================
+           BLOG TEXT
+           ========================================= */
 
         .article-text {
             font-size: 17px;
@@ -187,37 +206,52 @@
 
 
         .article-text p {
-            margin-bottom: 24px;
+            margin: 0 0 24px;
         }
 
 
         .article-text h2 {
             margin-top: 45px;
+            margin-bottom: 15px;
+
+            color: var(--bar-color);
 
             font-size: 28px;
-
-            color:
-                var(--purple);
         }
 
 
-        /* =====================================
+        /* =========================================
+           OPTIONAL EXTRA IMAGES
+           ========================================= */
+
+        .article-extra-image {
+            width: 100%;
+
+            margin: 35px 0;
+        }
+
+
+        .article-extra-image img {
+            display: block;
+
+            width: 100%;
+            height: auto;
+        }
+
+
+        /* =========================================
            BACK BUTTON
-           ===================================== */
+           ========================================= */
 
         .back-button {
             display: inline-block;
 
             margin-top: 40px;
 
-            padding:
-                13px 25px;
+            padding: 13px 25px;
 
-            background:
-                var(--purple);
-
-            color:
-                var(--white);
+            background-color: var(--bar-color);
+            color: var(--bar-text);
 
             text-decoration: none;
 
@@ -230,15 +264,14 @@
         }
 
 
-        /* =====================================
+        /* =========================================
            MOBILE
-           ===================================== */
+           ========================================= */
 
         @media (max-width: 750px) {
 
             .topbar {
-                padding:
-                    20px 0;
+                padding: 20px 0;
             }
 
 
@@ -255,6 +288,11 @@
                 justify-content: center;
 
                 gap: 20px;
+            }
+
+
+            .article {
+                margin-top: 35px;
             }
 
 
@@ -331,87 +369,161 @@
 
 
     <!-- =====================================
-         FULL POST
+         BLOG POST
          ===================================== -->
 
     <main class="article">
 
 
-        <!-- IMAGE -->
+        <!-- =================================
+             MAIN IMAGE
+
+             Uses:
+             images/post4.png
+             ================================= -->
 
         <div class="article-image">
 
             <img
                 src="images/post4.png"
-                alt="Post 4"
+                alt="Blog post image"
             >
 
         </div>
 
 
-        <!-- TITLE -->
+
+        <!-- =================================
+             TITLE
+             ================================= -->
 
         <h1>
             NEW BLOG POST
         </h1>
 
 
-        <!-- DATE -->
+        <!-- =================================
+             DATE
+             ================================= -->
 
         <p class="date">
             8/23/26
         </p>
 
 
+
         <!-- =================================
-             WRITE THE FULL BLOG HERE
+             WRITE YOUR POST HERE
              ================================= -->
 
         <div class="article-text">
 
+
             <p>
-                Put the full blog post here.
+                This is my fourth blog post!
             </p>
 
 
             <p>
-                You can make this as long as you want.
-                Just keep adding paragraph blocks.
+                Replace this text with whatever you want
+                to write about.
             </p>
 
 
             <p>
-                For example, this could be a development update,
-                something you learned, screenshots from a project,
-                or whatever else you want to write about.
+                You can make the blog post as long as you
+                want. The page will automatically get longer
+                and you can scroll down.
             </p>
 
+
+
+            <!-- =============================
+                 OPTIONAL HEADING
+                 ============================= -->
 
             <h2>
-                Another Section
+                A SECTION TITLE
             </h2>
 
 
             <p>
-                You can use headings like this when the post
-                gets longer.
+                You can separate parts of your post with
+                headings like this.
             </p>
 
 
             <p>
-                And then keep writing more and more text.
+                Then just keep adding more paragraphs.
             </p>
 
 
+            <p>
+                And more paragraphs.
+            </p>
+
+
+            <p>
+                And MORE paragraphs.
+            </p>
+
+
+
+            <!-- =============================
+                 OPTIONAL EXTRA IMAGE
+
+                 Delete this entire section if
+                 you only want the top image.
+                 ============================= -->
+
+            <!--
+
+            <div class="article-extra-image">
+
+                <img
+                    src="images/whatever.png"
+                    alt="Extra image"
+                >
+
+            </div>
+
+            -->
+
+
+
+            <!-- =============================
+                 ANOTHER SECTION
+                 ============================= -->
+
+            <h2>
+                ANOTHER SECTION
+            </h2>
+
+
+            <p>
+                More stuff can go here.
+            </p>
+
+
+            <p>
+                Basically, just duplicate one of these
+                paragraph blocks whenever you want more text.
+            </p>
+
+
+            <!-- =================================
+                 BACK TO BLOG
+                 ================================= -->
+
             <a
-                class="back-button"
                 href="blog.html"
+                class="back-button"
             >
                 BACK TO BLOG
             </a>
 
-        </div>
 
+        </div>
 
     </main>
 
