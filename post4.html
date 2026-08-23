@@ -221,6 +221,29 @@
 
 
         /* =========================================
+           VIDEO
+           ========================================= */
+
+        .article-video {
+            width: 100%;
+
+            margin: 35px 0;
+        }
+
+
+        .article-video video {
+            display: block;
+
+            width: 100%;
+            height: auto;
+
+            max-height: 600px;
+
+            background-color: black;
+        }
+
+
+        /* =========================================
            OPTIONAL EXTRA IMAGES
            ========================================= */
 
@@ -236,6 +259,35 @@
 
             width: 100%;
             height: auto;
+        }
+
+
+        /* =========================================
+           CONVERSATIONS
+           ========================================= */
+
+        .conversation {
+            margin: 30px 0;
+
+            padding: 20px 25px;
+
+            border-left: 4px solid var(--bar-color);
+
+            background-color: #f5f5f5;
+        }
+
+
+        .conversation-title {
+            font-weight: bold;
+
+            margin-bottom: 20px;
+        }
+
+
+        .speaker {
+            font-weight: bold;
+
+            color: var(--bar-color);
         }
 
 
@@ -304,6 +356,7 @@
             .article-text {
                 font-size: 16px;
             }
+
         }
 
     </style>
@@ -377,16 +430,13 @@
 
         <!-- =================================
              MAIN IMAGE
-
-             Uses:
-             images/post4.png
              ================================= -->
 
         <div class="article-image">
 
             <img
                 src="images/post4.png"
-                alt="Blog post image"
+                alt="Floodgate blog post image"
             >
 
         </div>
@@ -413,176 +463,312 @@
 
 
         <!-- =================================
-             WRITE YOUR POST HERE
+             ARTICLE TEXT
              ================================= -->
 
         <div class="article-text">
 
 
             <p>
-Hey!
-            <p>
-I've been working on Floodgate a lot recently, and I realized I've shown plenty of screenshots and talked about individual rooms, but I haven't actually put much normal gameplay footage here.
-            <p>
-So... let's fix that lol.
-            <p>
-Here's some gameplay from the current build!
-            </p>
-            [video here]
-            </p>
-Obviously, everything here is still a work in progress. Rooms will change, mechanics will get tweaked, things will break, and I'll inevitably decide something I've spent three hours making looks like shit and redo the entire thing.
-            </p>
-But I'm really happy with how Floodgate is starting to actually feel like a game instead of a collection of rooms and mechanics I've made.
-            </p>
-There's still a LOT left to make, but we're getting there! :P
-            <h2>
-                Sebastian & Chip
-            </h2>
-I've also been working on Sebastian's shop!
-            <p>
-Unlike PRESSURE, Sebastian isn't just sitting out in the open. In Floodgate, he mostly lives inside a vent, occasionally sticking his upper body out to talk to you and run his little definitely-completely-legal business.
-            <p>
-More importantly, Sebastian and Chip talk to each other.
-            <p>
-If you hang around the shop instead of immediately leaving, you'll occasionally hear conversations between them. Some are useful, some give little bits of information about the Blacksite, and some are about absolutely fucking nothing.
-            <p>
-Here's a couple I've written:
-
-            <p>
-Conversation 1 — DeVines
-            <p>
-CHIP:
-“You don't like DeVines, do you?”
-            <p>
-SEBASTIAN:
-“No.”
-            <p>
-CHIP:
-“Why?”
-            <p>
-SEBASTIAN:
-“They're annoying.”
-            <p>
-CHIP:
-“They're plants.”
-            <p>
-SEBASTIAN:
-“Annoying plants.”
-            <p>
-CHIP:
-“What did a plant possibly do to you?”
-            <p>
-SEBASTIAN:
-“Grabbed my tail.”
-            <p>
-CHIP:
-“Oh.”
-            <p>
-SEBASTIAN:
-“Three times.”
-            <p>
-CHIP:
-“...Same one?”
-            <p>
-SEBASTIAN:
-“Same. Fucking. One.”
-            <p>
-Conversation 2 — Expendables
-            <p>
-SEBASTIAN:
-“Expendables are weird.”
-            <p>
-CHIP:
-“They're standing right there.”
-            <p>
-SEBASTIAN:
-“I know.”
-            <p>
-CHIP:
-“They can hear you.”
-            <p>
-SEBASTIAN:
-“I know.”
-            <p>
-Sebastian looks directly at you.
-            <p>
-SEBASTIAN:
-“Expendables are weird.”
-            <p>
-And those are only the conversations Sebastian is willing to have while you're around.
-            <p>
-There may or may not be a way to make Sebastian think you've left the shop and listen to what he and Chip talk about when nobody else is around.
-            <p>
-But that would be eavesdropping.
-            <p>
-And eavesdropping is rude.
-            <p>
-So obviously you shouldn't do that.
-            <p>
-:P
-            <p>
-Anyway, that's all for now! I'm gonna get back to working on Floodgate before I inevitably find another completely unnecessary feature to add.
-            <p>
-See ya!
+                Hey!
             </p>
 
 
             <p>
-                Then just keep adding more paragraphs.
+                I've been working on Floodgate a lot recently,
+                and I realized I've shown plenty of screenshots
+                and talked about individual rooms, but I haven't
+                actually put much normal gameplay footage here.
             </p>
 
 
             <p>
-                And more paragraphs.
+                So... let's fix that lol.
             </p>
 
 
             <p>
-                And MORE paragraphs.
+                Here's some gameplay from the current build!
             </p>
 
 
 
-            <!-- =============================
-                 OPTIONAL EXTRA IMAGE
+            <!-- =================================
+                 FLOODGATE GAMEPLAY VIDEO
 
-                 Delete this entire section if
-                 you only want the top image.
-                 ============================= -->
+                 FILE:
+                 videos/floodgate-gameplay.mp4
+                 ================================= -->
 
-            <!--
+            <div class="article-video">
 
-            <div class="article-extra-image">
+                <video controls preload="metadata">
 
-                <img
-                    src="images/whatever.png"
-                    alt="Extra image"
-                >
+                    <source
+                        src="videos/floodgate-gameplay.mp4"
+                        type="video/mp4"
+                    >
+
+                    Your browser does not support the video tag.
+
+                </video>
 
             </div>
 
-            -->
+
+
+            <p>
+                Obviously, everything here is still a work in
+                progress. Rooms will change, mechanics will get
+                tweaked, things will break, and I'll inevitably
+                decide something I've spent three hours making
+                looks like shit and redo the entire thing.
+            </p>
+
+
+            <p>
+                But I'm really happy with how Floodgate is
+                starting to actually feel like a game instead
+                of a collection of rooms and mechanics I've made.
+            </p>
+
+
+            <p>
+                There's still a LOT left to make, but we're
+                getting there! :P
+            </p>
 
 
 
-            <!-- =============================
-                 ANOTHER SECTION
-                 ============================= -->
+            <!-- =================================
+                 SEBASTIAN & CHIP
+                 ================================= -->
 
             <h2>
-                ANOTHER SECTION
+                Sebastian & Chip
             </h2>
 
 
             <p>
-                More stuff can go here.
+                I've also been working on Sebastian's shop!
             </p>
 
 
             <p>
-                Basically, just duplicate one of these
-                paragraph blocks whenever you want more text.
+                Unlike PRESSURE, Sebastian isn't just sitting
+                out in the open. In Floodgate, he mostly lives
+                inside a vent, occasionally sticking his upper
+                body out to talk to you and run his little
+                definitely-completely-legal business.
             </p>
+
+
+            <p>
+                More importantly, Sebastian and Chip talk to
+                each other.
+            </p>
+
+
+            <p>
+                If you hang around the shop instead of immediately
+                leaving, you'll occasionally hear conversations
+                between them. Some are useful, some give little
+                bits of information about the Blacksite, and
+                some are about absolutely fucking nothing.
+            </p>
+
+
+            <p>
+                Here's a couple I've written:
+            </p>
+
+
+
+            <!-- =================================
+                 CONVERSATION 1
+                 ================================= -->
+
+            <div class="conversation">
+
+                <p class="conversation-title">
+                    Conversation 1 — DeVines
+                </p>
+
+
+                <p>
+                    <span class="speaker">CHIP:</span><br>
+                    “You don't like DeVines, do you?”
+                </p>
+
+
+                <p>
+                    <span class="speaker">SEBASTIAN:</span><br>
+                    “No.”
+                </p>
+
+
+                <p>
+                    <span class="speaker">CHIP:</span><br>
+                    “Why?”
+                </p>
+
+
+                <p>
+                    <span class="speaker">SEBASTIAN:</span><br>
+                    “They're annoying.”
+                </p>
+
+
+                <p>
+                    <span class="speaker">CHIP:</span><br>
+                    “They're plants.”
+                </p>
+
+
+                <p>
+                    <span class="speaker">SEBASTIAN:</span><br>
+                    “Annoying plants.”
+                </p>
+
+
+                <p>
+                    <span class="speaker">CHIP:</span><br>
+                    “What did a plant possibly do to you?”
+                </p>
+
+
+                <p>
+                    <span class="speaker">SEBASTIAN:</span><br>
+                    “Grabbed my tail.”
+                </p>
+
+
+                <p>
+                    <span class="speaker">CHIP:</span><br>
+                    “Oh.”
+                </p>
+
+
+                <p>
+                    <span class="speaker">SEBASTIAN:</span><br>
+                    “Three times.”
+                </p>
+
+
+                <p>
+                    <span class="speaker">CHIP:</span><br>
+                    “...Same one?”
+                </p>
+
+
+                <p>
+                    <span class="speaker">SEBASTIAN:</span><br>
+                    “Same. Fucking. One.”
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 CONVERSATION 2
+                 ================================= -->
+
+            <div class="conversation">
+
+                <p class="conversation-title">
+                    Conversation 2 — Expendables
+                </p>
+
+
+                <p>
+                    <span class="speaker">SEBASTIAN:</span><br>
+                    “Expendables are weird.”
+                </p>
+
+
+                <p>
+                    <span class="speaker">CHIP:</span><br>
+                    “They're standing right there.”
+                </p>
+
+
+                <p>
+                    <span class="speaker">SEBASTIAN:</span><br>
+                    “I know.”
+                </p>
+
+
+                <p>
+                    <span class="speaker">CHIP:</span><br>
+                    “They can hear you.”
+                </p>
+
+
+                <p>
+                    <span class="speaker">SEBASTIAN:</span><br>
+                    “I know.”
+                </p>
+
+
+                <p>
+                    <em>Sebastian looks directly at you.</em>
+                </p>
+
+
+                <p>
+                    <span class="speaker">SEBASTIAN:</span><br>
+                    “Expendables are weird.”
+                </p>
+
+            </div>
+
+
+
+            <p>
+                And those are only the conversations Sebastian
+                is willing to have while you're around.
+            </p>
+
+
+            <p>
+                There may or may not be a way to make Sebastian
+                think you've left the shop and listen to what
+                he and Chip talk about when nobody else is around.
+            </p>
+
+
+            <p>
+                But that would be eavesdropping.
+            </p>
+
+
+            <p>
+                And eavesdropping is rude.
+            </p>
+
+
+            <p>
+                So obviously you shouldn't do that.
+            </p>
+
+
+            <p>
+                :P
+            </p>
+
+
+            <p>
+                Anyway, that's all for now! I'm gonna get back
+                to working on Floodgate before I inevitably find
+                another completely unnecessary feature to add.
+            </p>
+
+
+            <p>
+                See ya!
+            </p>
+
 
 
             <!-- =================================
