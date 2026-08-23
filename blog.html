@@ -3,21 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Blog - CharlieClip</title>
 
     <style>
 
         /* =========================================
-           COLORS - EDIT THESE
+           COLORS
            ========================================= */
 
         :root {
-            --background: white;
+            --background: #ffffff;
 
             --bar-color: #a545a5;
-            --bar-text: white;
+            --bar-text: #ffffff;
 
             --post-title: #ef5a5a;
             --text-color: #111111;
@@ -34,16 +38,29 @@
             box-sizing: border-box;
         }
 
+
         html,
         body {
             margin: 0;
             padding: 0;
+
             width: 100%;
+            min-height: 100%;
 
             background: var(--background);
             color: var(--text-color);
 
-            font-family: Arial, sans-serif;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            /* =================================
+               SCROLLING
+               ================================= */
+
+            overflow-x: hidden;
+            overflow-y: auto;
         }
 
 
@@ -53,12 +70,16 @@
 
         .topbar {
             width: 100%;
-            height: 75px;
+
+            min-height: 75px;
 
             background: var(--bar-color);
 
             display: flex;
             align-items: center;
+
+            position: relative;
+            z-index: 100;
         }
 
 
@@ -69,6 +90,7 @@
             margin: 0 auto;
 
             display: flex;
+
             justify-content: space-between;
             align-items: center;
         }
@@ -86,7 +108,9 @@
 
         .links {
             display: flex;
+
             align-items: center;
+
             gap: 35px;
         }
 
@@ -97,11 +121,18 @@
             text-decoration: none;
 
             font-size: 15px;
+
+            padding: 8px 0;
+
+            border-bottom: 2px solid transparent;
         }
 
 
         .links a:hover {
-            text-decoration: underline;
+            opacity: 0.8;
+
+            border-bottom-color:
+                var(--bar-text);
         }
 
 
@@ -111,12 +142,15 @@
 
         .blog {
             width: 92%;
-            max-width: var(--max-width);
 
-            margin: 0 auto;
+            max-width:
+                var(--max-width);
 
-            padding-top: 70px;
-            padding-bottom: 100px;
+            margin:
+                0 auto;
+
+            padding:
+                70px 0 100px;
         }
 
 
@@ -125,6 +159,8 @@
            ========================================= */
 
         .post {
+            width: 100%;
+
             display: flex;
 
             align-items: center;
@@ -171,9 +207,11 @@
 
 
         .post-text h2 {
-            margin-top: 0;
+            margin:
+                0 0 20px;
 
-            color: var(--post-title);
+            color:
+                var(--post-title);
 
             font-size: 28px;
 
@@ -193,13 +231,21 @@
         }
 
 
+        /* =========================================
+           READ MORE
+           ========================================= */
+
         .read-more {
             color: var(--post-title);
+
+            text-decoration: underline;
+
+            font-size: 14px;
         }
 
 
         .read-more:hover {
-            opacity: 0.75;
+            opacity: 0.7;
         }
 
 
@@ -210,20 +256,23 @@
         @media (max-width: 750px) {
 
             .topbar {
-                height: auto;
-                padding: 20px 0;
+                padding:
+                    20px 0;
             }
 
 
             .nav {
                 flex-direction: column;
+
                 gap: 15px;
             }
 
 
             .links {
                 flex-wrap: wrap;
+
                 justify-content: center;
+
                 gap: 20px;
             }
 
@@ -231,6 +280,8 @@
             .post,
             .post.reverse {
                 flex-direction: column;
+
+                gap: 30px;
             }
 
 
@@ -260,7 +311,10 @@
 
         <div class="nav">
 
-            <a href="index.html" class="logo">
+            <a
+                href="index.html"
+                class="logo"
+            >
                 CharlieClip
             </a>
 
@@ -277,8 +331,14 @@
                 </a>
 
 
-<a href="games.html">Games</a>
-<a href="about.html">About</a>
+                <a href="games.html">
+                    Games
+                </a>
+
+
+                <a href="about.html">
+                    About
+                </a>
 
 
                 <a
@@ -298,10 +358,58 @@
 
 
     <!-- =====================================
-         POSTS
+         BLOG POSTS
          ===================================== -->
 
     <main class="blog">
+
+
+        <!-- =====================================
+             POST 4
+             NEWEST POST
+             ===================================== -->
+
+        <article class="post reverse">
+
+            <div class="post-image">
+
+                <img
+                    src="images/post4.png"
+                    alt="Post 4"
+                >
+
+            </div>
+
+
+            <div class="post-text">
+
+                <h2>
+                    NEW BLOG POST
+                </h2>
+
+
+                <p>
+                    This is the description for your newest post.
+                    Change this to whatever you want.
+                </p>
+
+
+                <p class="date">
+                    8/23/26
+                </p>
+
+
+                <a
+                    href="post4.html"
+                    class="read-more"
+                >
+                    Read More
+                </a>
+
+            </div>
+
+        </article>
+
 
 
         <!-- =====================================
@@ -328,7 +436,7 @@
 
 
                 <p>
-                   yep! the firewall is done.. whats floodgate?
+                    yep! the firewall is done.. whats floodgate?
                 </p>
 
 
@@ -376,8 +484,6 @@
                 <p>
                     Why not lol
                 </p>
-
-
 
 
                 <p class="date">
