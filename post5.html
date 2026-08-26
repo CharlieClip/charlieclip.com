@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>New Post - CharlieClip</title>
+
+
+    <style>
+
+        /* =========================================
+           COLORS
+           ========================================= */
+
+        :root {
+            --background: #ffffff;
+            --text-color: #111111;
+
+            --bar-color: #a545a5;
+            --bar-text: #ffffff;
+
+            --title-color: #ef5a5a;
+
+            --max-width: 900px;
+        }
+
+
+        /* =========================================
+           RESET
+           ========================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+
+            width: 100%;
+            min-height: 100%;
+
+            background-color:
+                var(--background);
+
+            color:
+                var(--text-color);
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+
+        /* =========================================
+           TOP BAR
+           ========================================= */
+
+        .topbar {
+            width: 100%;
+            min-height: 75px;
+
+            background-color:
+                var(--bar-color);
+
+            display: flex;
+            align-items: center;
+        }
+
+
+        .nav {
+            width: 92%;
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo {
+            color:
+                var(--bar-text);
+
+            text-decoration: none;
+
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+
+        .links {
+            display: flex;
+            align-items: center;
+
+            gap: 35px;
+        }
+
+
+        .links a {
+            color:
+                var(--bar-text);
+
+            text-decoration: none;
+
+            font-size: 15px;
+
+            padding: 8px 0;
+
+            border-bottom:
+                2px solid transparent;
+        }
+
+
+        .links a:hover {
+            border-bottom-color:
+                var(--bar-text);
+        }
+
+
+        /* =========================================
+           ARTICLE
+           ========================================= */
+
+        .article {
+            width: 92%;
+
+            max-width:
+                var(--max-width);
+
+            margin:
+                60px auto 120px;
+        }
+
+
+        /* =========================================
+           TOP IMAGE
+           ========================================= */
+
+        .article-image {
+            width: 100%;
+
+            margin-bottom: 35px;
+        }
+
+
+        .article-image img {
+            display: block;
+
+            width: 100%;
+            max-height: 500px;
+
+            object-fit: cover;
+
+            background-color:
+                #eeeeee;
+        }
+
+
+        /* =========================================
+           TITLE
+           ========================================= */
+
+        .article h1 {
+            margin:
+                0 0 10px;
+
+            color:
+                var(--title-color);
+
+            font-size:
+                42px;
+
+            line-height:
+                1.2;
+        }
+
+
+        /* =========================================
+           DATE
+           ========================================= */
+
+        .date {
+            margin-bottom: 35px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================================
+           BLOG TEXT
+           ========================================= */
+
+        .article-text {
+            font-size: 17px;
+
+            line-height: 1.8;
+        }
+
+
+        .article-text p {
+            margin:
+                0 0 24px;
+        }
+
+
+        .article-text h2 {
+            margin-top: 45px;
+            margin-bottom: 15px;
+
+            color:
+                var(--bar-color);
+
+            font-size:
+                28px;
+        }
+
+
+        /* =========================================
+           EXTRA IMAGE
+           ========================================= */
+
+        .article-extra-image {
+            width: 100%;
+
+            margin:
+                35px 0;
+        }
+
+
+        .article-extra-image img {
+            display: block;
+
+            width: 100%;
+            height: auto;
+        }
+
+
+        /* =========================================
+           BACK BUTTON
+           ========================================= */
+
+        .back-button {
+            display: inline-block;
+
+            margin-top: 40px;
+
+            padding:
+                13px 25px;
+
+            background-color:
+                var(--bar-color);
+
+            color:
+                var(--bar-text);
+
+            text-decoration:
+                none;
+
+            font-weight:
+                bold;
+        }
+
+
+        .back-button:hover {
+            opacity: 0.8;
+        }
+
+
+        /* =========================================
+           MOBILE
+           ========================================= */
+
+        @media (max-width: 750px) {
+
+            .topbar {
+                padding:
+                    20px 0;
+            }
+
+
+            .nav {
+                flex-direction:
+                    column;
+
+                gap:
+                    15px;
+            }
+
+
+            .links {
+                flex-wrap:
+                    wrap;
+
+                justify-content:
+                    center;
+
+                gap:
+                    20px;
+            }
+
+
+            .article {
+                margin-top:
+                    35px;
+            }
+
+
+            .article h1 {
+                font-size:
+                    32px;
+            }
+
+
+            .article-text {
+                font-size:
+                    16px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         TOP BAR
+         ===================================== -->
+
+    <header class="topbar">
+
+        <div class="nav">
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                CharlieClip
+            </a>
+
+
+            <div class="links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+
+                <a href="blog.html">
+                    Blog
+                </a>
+
+
+                <a href="games.html">
+                    Games
+                </a>
+
+
+                <a href="about.html">
+                    About
+                </a>
+
+
+                <a
+                    href="https://charlieclip.itch.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    itch.io
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         BLOG POST
+         ===================================== -->
+
+    <main class="article">
+
+
+        <!-- =================================
+             MAIN IMAGE
+             ================================= -->
+
+        <div class="article-image">
+
+            <img
+                src="images/post5.png"
+                alt="Post 5 image"
+            >
+
+        </div>
+
+
+
+        <!-- =================================
+             TITLE
+             ================================= -->
+
+        <h1>
+            NEW POST TITLE
+        </h1>
+
+
+        <!-- =================================
+             DATE
+             ================================= -->
+
+        <p class="date">
+            8/25/26
+        </p>
+
+
+
+        <!-- =================================
+             POST CONTENT
+             ================================= -->
+
+        <div class="article-text">
+
+
+            <p>
+                Hey!
+            </p>
+
+
+            <p>
+                This is the start of my fifth blog post.
+                Replace this with whatever you want to write.
+            </p>
+
+
+            <p>
+                You can make this post as long as you want.
+                The page will automatically scroll when there
+                is more content than can fit on the screen.
+            </p>
+
+
+            <h2>
+                Section Title
+            </h2>
+
+
+            <p>
+                Put another part of the post here.
+            </p>
+
+
+            <p>
+                You can keep adding paragraphs by copying
+                another &lt;p&gt; block.
+            </p>
+
+
+            <p>
+                For example, you could talk about development,
+                something new you've added, ideas you're working
+                on, or whatever else you want.
+            </p>
+
+
+
+            <!-- =================================
+                 OPTIONAL SECOND IMAGE
+
+                 Remove the <!-- and --> around
+                 this section if you want to use it.
+                 ================================= -->
+
+            <!--
+
+            <div class="article-extra-image">
+
+                <img
+                    src="images/post5-extra.png"
+                    alt="Extra image"
+                >
+
+            </div>
+
+            -->
+
+
+            <h2>
+                Another Section
+            </h2>
+
+
+            <p>
+                More text goes here.
+            </p>
+
+
+            <p>
+                And more text can go here too.
+            </p>
+
+
+            <p>
+                That's basically it!
+            </p>
+
+
+            <!-- =================================
+                 BACK BUTTON
+                 ================================= -->
+
+            <a
+                href="blog.html"
+                class="back-button"
+            >
+                BACK TO BLOG
+            </a>
+
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>
