@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Post 7 - .Json</title>
+
+
+    <style>
+
+        /* =========================================
+           COLORS
+           ========================================= */
+
+        :root {
+            --background: #ffffff;
+
+            --bar-color: #a545a5;
+            --bar-text: #ffffff;
+
+            --title-color: #ef5a5a;
+            --text-color: #111111;
+
+            --max-width: 900px;
+        }
+
+
+        /* =========================================
+           RESET
+           ========================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+
+            width: 100%;
+            min-height: 100%;
+
+            background:
+                var(--background);
+
+            color:
+                var(--text-color);
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            overflow-x: hidden;
+        }
+
+
+        /* =========================================
+           TOP BAR
+           ========================================= */
+
+        .topbar {
+            width: 100%;
+
+            min-height: 75px;
+
+            background:
+                var(--bar-color);
+
+            display: flex;
+            align-items: center;
+        }
+
+
+        .nav {
+            width: 92%;
+
+            max-width: 1100px;
+
+            margin:
+                0 auto;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        .logo {
+            color:
+                var(--bar-text);
+
+            text-decoration: none;
+
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+
+        .links {
+            display: flex;
+
+            align-items: center;
+
+            gap: 35px;
+        }
+
+
+        .links a {
+            color:
+                var(--bar-text);
+
+            text-decoration: none;
+
+            font-size: 15px;
+
+            padding:
+                8px 0;
+
+            border-bottom:
+                2px solid transparent;
+        }
+
+
+        .links a:hover {
+            opacity: 0.8;
+
+            border-bottom-color:
+                var(--bar-text);
+        }
+
+
+        /* =========================================
+           POST
+           ========================================= */
+
+        .post {
+            width: 92%;
+
+            max-width:
+                var(--max-width);
+
+            margin:
+                70px auto 120px;
+        }
+
+
+        .post h1 {
+            margin:
+                0 0 10px;
+
+            color:
+                var(--title-color);
+
+            font-size: 38px;
+
+            line-height: 1.2;
+        }
+
+
+        .date {
+            margin:
+                0 0 35px;
+
+            font-weight: bold;
+
+            color: #555555;
+        }
+
+
+        /* =========================================
+           HERO IMAGE
+           ========================================= */
+
+        .hero-image {
+            width: 100%;
+
+            margin-bottom: 40px;
+        }
+
+
+        .hero-image img {
+            display: block;
+
+            width: 100%;
+            height: auto;
+
+            background:
+                #dddddd;
+        }
+
+
+        /* =========================================
+           POST TEXT
+           ========================================= */
+
+        .content {
+            font-size: 17px;
+
+            line-height: 1.8;
+        }
+
+
+        .content p {
+            margin:
+                0 0 25px;
+        }
+
+
+        .content h2 {
+            margin:
+                45px 0 15px;
+
+            color:
+                var(--title-color);
+
+            font-size: 27px;
+        }
+
+
+        /* =========================================
+           BACK BUTTON
+           ========================================= */
+
+        .back {
+            display: inline-block;
+
+            margin-top: 45px;
+
+            color:
+                var(--title-color);
+
+            text-decoration: underline;
+
+            font-size: 15px;
+        }
+
+
+        .back:hover {
+            opacity: 0.7;
+        }
+
+
+        /* =========================================
+           MOBILE
+           ========================================= */
+
+        @media (max-width: 750px) {
+
+            .topbar {
+                padding:
+                    20px 0;
+            }
+
+
+            .nav {
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+
+            .links {
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 20px;
+            }
+
+
+            .post {
+                margin-top: 45px;
+            }
+
+
+            .post h1 {
+                font-size: 31px;
+            }
+
+
+            .content {
+                font-size: 16px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         TOP BAR
+         ===================================== -->
+
+    <header class="topbar">
+
+        <div class="nav">
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                .Json
+            </a>
+
+
+            <div class="links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+
+                <a href="blog.html">
+                    Blog
+                </a>
+
+
+                <a href="games.html">
+                    Games
+                </a>
+
+
+                <a href="about.html">
+                    About
+                </a>
+
+
+                <a
+                    href="https://charlieclip.itch.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    itch.io
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         POST 7
+         ===================================== -->
+
+    <main class="post">
+
+        <h1>
+            Post 7
+        </h1>
+
+
+        <p class="date">
+            9/3/26
+        </p>
+
+
+        <div class="hero-image">
+
+            <img
+                src="images/post7.png"
+                alt="Post 7"
+            >
+
+        </div>
+
+
+        <div class="content">
+
+            <p>
+                Put the opening paragraph for Post 7 here.
+            </p>
+
+
+            <p>
+                You can keep adding as many paragraphs as you want.
+            </p>
+
+
+            <h2>
+                Section Title
+            </h2>
+
+
+            <p>
+                Put another section of the post here.
+            </p>
+
+
+            <p>
+                Replace all of this placeholder writing with the actual post whenever you're ready.
+            </p>
+
+
+            <a
+                href="blog.html"
+                class="back"
+            >
+                ← Back to Blog
+            </a>
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>
